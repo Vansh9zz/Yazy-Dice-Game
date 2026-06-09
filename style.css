@@ -1,0 +1,66 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color: #000b1b;
+}
+
+.container{
+    margin:1vh 1vw;
+    height:98vh;
+    width:98vw;
+    display: flex;
+    flex-direction: column;
+    background-image: url("images/bg-landing.png");
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 8rem;
+    color: white;
+    font-weight: 400;
+}
+
+.yellow{
+    color: rgb(193, 162, 28);
+}
+
+p{
+    margin: 0.5vmin;
+    color: white;
+}
+
+button{
+    height:7vmin;
+    width:40vmin;
+    font-size: 3vmin;
+    border-radius: 2vmin;
+    border : none;
+    color : white;
+    margin : 0.5vmin;
+}
+
+#play-btn{
+    background-color: #a7731e;
+    font-size : 3.7vmin;
+    font-weight: 600;
+}
+
+#tut-btn{
+    background-color: #0B1324;
+    border-color : #c89a2b;
+    font-size: 3.4vmin;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#last-p{
+    margin-bottom: 2vmin;
+}
