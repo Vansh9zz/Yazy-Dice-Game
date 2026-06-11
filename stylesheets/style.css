@@ -1,0 +1,593 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color: #00040e;
+}
+
+.container{
+    margin:1vh 1vw;
+    height:98vh;
+    width:98vw;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-image: url("images/bg-landing.png");
+}
+
+.landing{
+    background-image: url("images/bg-landing.png");
+}
+
+
+
+h1{
+    font-size: 8rem;
+    color: white;
+    font-weight: 800;
+}
+
+.yellow{
+    color: rgb(193, 162, 28);
+}
+
+p{
+    margin: 0.5vmin;
+    color: white;
+
+    font-size: 1.4rem;
+}
+
+button{
+    height:7vmin;
+    width:40vmin;
+    font-size: 3vmin;
+    border-radius: 2vmin;
+    border : none;
+    color : white;
+    margin : 0.5vmin;
+}
+
+.gold-btn{
+    background-color: #a7731e;
+    font-size : 3.7vmin;
+    font-weight: 600;
+}
+
+.gold-btn:hover{
+    background: #d39a30;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(195,138,34,0.35);
+}
+
+.gold-btn:disabled{
+    background : #5a4a24;
+    color: #b7b7b7;
+}
+
+.sec-btn{
+    background-color: #0B1324;
+    border-color : #c89a2b;
+    font-size: 3.4vmin;
+    border-radius: 2vmin;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.last-p{
+    margin-bottom: 2vmin;
+}
+
+h2{
+    font-size: 2.5rem;
+    margin: 2vmin;
+}
+
+.player-card-container-row1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-card-container-row2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+
+    height:20vmin;
+    width:20vmin;
+
+    margin:1vmin;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1rem;
+    font-weight: 400;
+    border : 0.5vmin solid #00040e;
+    border-radius: 2vmin;
+
+    background-color: #0c1635;
+
+    cursor : pointer;
+}
+
+.card-number{
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.selected{
+    background: #0d236e;
+    border: 0.5vmin solid #c38a22;
+}
+
+.card:hover{
+    background-color: #102050;
+    transform: translateY(-4px);
+}
+
+.selected:hover{
+    background: #1634a5;
+    border-color: #d9a441;
+    box-shadow: 0 0 15px rgba(217,164,65,0.35);
+    transform: translateY(-4px);
+}
+
+#tut-btn:hover{
+    background: #102050;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(16,32,80,0.35);
+}
+
+.team-selection-card-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-card{
+
+    height:40vmin;
+
+    border-radius: 4vmin;
+
+    margin : 1vmin;
+    padding : 1vmin;    
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.team-card-heading{
+    font-size : 3rem;
+    font-weight: 600;
+
+    margin: 2vmin;
+}
+
+.team-card-text{
+    margin: 0.9vmin;
+    font-size : 1.5rem;
+}
+
+.team-card-players-info{
+    height: 10vmin;
+    width: 60%;
+
+    margin: 3vmin;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid transparent;
+    border-radius: 1.5vmin;
+}
+
+#heading{
+    font-size: 5rem;
+    margin : 2vmin;
+
+}
+
+.solo{
+    background: #08152F;
+    border: 2px solid #33D6E8;
+
+    color : #33D6E8;
+
+    box-shadow: none;
+
+}
+
+.doubles{
+    background: #08152F;
+    border: 2px solid #D8A028;
+
+    color : #D8A028;
+
+    box-shadow: none;
+
+}
+
+.triples{
+    background: #08152F;
+    border: 2px solid #A75CFF;
+
+    color : #A75CFF;
+
+    box-shadow: none;
+
+}
+
+.solo:hover{
+    background: #102B3A;
+}
+
+.doubles:hover{
+    background: #2D2414;
+}
+
+.triples:hover{
+    background: #25183A;
+}
+
+.solo.selected-fmt{
+    background: #0E2C38;
+    border: 4px solid #33D6E8;
+    color: #33D6E8;
+    box-shadow: 0 0 25px #33D6E840;
+}
+
+.doubles.selected-fmt{
+    background: #2B2110;
+    border: 4px solid #D8A028;
+    color: #D8A028;
+    box-shadow: 0 0 25px #D8A02840;
+}
+
+.triples.selected-fmt{
+    background: #231434;
+    border: 4px solid #A75CFF;
+    color: #A75CFF;
+    box-shadow: 0 0 25px #A75CFF40;
+}
+
+.solo .team-card-players-info{
+    border: 2px solid #33D6E8;
+}
+
+.doubles .team-card-players-info{
+    border: 2px solid #D8A028;
+}
+
+.triples .team-card-players-info{
+    border: 2px solid #A75CFF;
+}
+
+.name-cards-row{
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.name-cards-row-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name-card{
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    margin: 4vmin;
+    font-size: 3vmin;
+    font-weight: 600;
+
+    border-radius: 2vmin;
+
+}
+
+input{
+    text-align: center;
+
+    margin: 1vmin;
+}
+
+.name-card-heading{
+    margin:2vmin;
+}
+
+.t1{
+    background: #0E2C38;
+    border: 3px solid #33D6E8;
+    color: #33D6E8;
+    box-shadow: 0 0 20px #33D6E840;
+}
+
+.t2{
+    background: #231434;
+    border: 3px solid #A75CFF;
+    color: #A75CFF;
+    box-shadow: 0 0 20px #A75CFF40;
+}
+
+.t3{
+    background: #2B2110;
+    border: 3px solid #D8A028;
+    color: #D8A028;
+    box-shadow: 0 0 20px #D8A02840;
+}
+
+.t4{
+    background: #10291C;
+    border: 3px solid #3DDC84;
+    color: #3DDC84;
+    box-shadow: 0 0 20px #3DDC8440;
+}
+
+.t5{
+    background: #311414;
+    border: 3px solid #FF6B6B;
+    color: #FF6B6B;
+    box-shadow: 0 0 20px #FF6B6B40;
+}
+
+.t6{
+    background: #301700;
+    border: 3px solid #FF7A00;
+    color: #FF7A00;
+    box-shadow: 0 0 20px #FF7A0040;
+}
+
+.t1-input{
+    background: #0E2C38;
+
+    border: 2px solid #33D6E8;
+    border-radius: 10px;
+
+    color: white;
+
+    padding: 10px 14px;
+
+    font-size: 1rem;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.t1-input:focus{
+    box-shadow: 0 0 12px #33D6E880;
+}
+.t2-input{
+    background: #0E2C38;
+
+    border: 2px solid #A75CFF;
+    border-radius: 10px;
+
+    color: white;
+
+    padding: 10px 14px;
+
+    font-size: 1rem;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.t2-input:focus{
+    box-shadow: 0 0 12px #A75CFF80;
+}
+.t3-input{
+    background: #0E2C38;
+
+    border: 2px solid #D8A028;
+    border-radius: 10px;
+
+    color: white;
+
+    padding: 10px 14px;
+
+    font-size: 1rem;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.t3-input:focus{
+    box-shadow: 0 0 12px #D8A02880;
+}
+.t4-input{
+    background: #0E2C38;
+
+    border: 2px solid #3DDC84;
+    border-radius: 10px;
+
+    color: white;
+
+    padding: 10px 14px;
+
+    font-size: 1rem;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.t4-input:focus{
+    box-shadow: 0 0 12px #3DDC8480;
+}
+
+.t5-input{
+    background: #0E2C38;
+
+    border: 2px solid #FF6B6B;
+    border-radius: 10px;
+
+    color: white;
+
+    padding: 10px 14px;
+
+    font-size: 1rem;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.t5-input:focus{
+    box-shadow: 0 0 12px #FF6B6B80;
+}
+
+.t6-input{
+    background: #0E2C38;
+
+    border: 2px solid #FF9F43;
+    border-radius: 10px;
+
+    color: white;
+
+    padding: 10px 14px;
+
+    font-size: 1rem;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.t6-input:focus{
+    box-shadow: 0 0 12px #FF9F4380;
+}
+
+.summary-info-row{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 4vmin;
+}
+
+.summary-players-card{
+
+    display: flex;
+    flex-direction: column;
+
+    width: 40%;
+    height: 15vmin;
+
+    justify-content: center;
+    align-items: center;
+
+    margin: 2vmin;
+
+    border: 2px solid #ffffff90;
+}
+
+.summary-teams-card{
+
+    display: flex;
+    flex-direction: column;
+
+    width: 40%;
+    height: 13vmin;
+
+    justify-content: center;
+    align-items: center;
+
+    margin: 2vmin;
+
+    border: 2px solid #ffffff90;
+}
+
+.summary-players-card-text{
+    font-size: 2.5vmin;
+}
+
+.summary-players-card-number{
+    font-size: 5vmin;
+    font-weight: 900;
+}
+
+.summary-teams-card-text{
+    font-size: 2.5vmin;
+}
+
+
+.summary-teams-card-info{
+    font-size: 6vmin;
+    font-weight: 900;
+}
+
+
+.summary-teams-card-num{
+    font-size: 2.5vmin;
+
+}
+
+.summary-team-card{
+
+    margin: 0.5vmin;
+
+    padding: 0.5vmin;
+    padding-left: 5vmin;
+    padding-right: 5vmin;
+    display: flex;
+    justify-content: space-evenly;
+
+    font-size: 2.8vmin;
+    border-radius: 2vmin;
+
+}
+
+.summary-team-card-containers{
+ 
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 2vmin;
+
+}
+
+.summary-team-card-playerName{
+    color: white;
+    padding: 0 5vmin 0 5vmin;
+}

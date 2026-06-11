@@ -61,6 +61,11 @@ player_cards.forEach(
 continue_btn.addEventListener('click', ()=>{
     if (isSelected){
         localStorage.setItem("num_players",num_players);
-        window.location.href = "teams.html";
+        if (num_players !== 4 && num_players !== 6){
+            localStorage.setItem("selected_fmt","solo");
+            window.location.href = "../pages/names.html"
+        } else {
+            window.location.href = "../pages/teams.html";
+        }
     }
 })
