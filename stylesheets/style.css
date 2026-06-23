@@ -17,11 +17,11 @@ body{
     justify-content: center;
     align-items: center;
     color: white;
-    background-image: url("images/bg-landing.png");
+    background-image: url("../assets/bg-landing.png");
 }
 
 .landing{
-    background-image: url("images/bg-landing.png");
+    background-image: url("../assets/bg-landing.png");
 }
 
 

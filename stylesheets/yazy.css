@@ -1,0 +1,212 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color: #00040e;
+}
+
+.topArea{
+    margin:2vmin;
+    color : #F8F9FA;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 3vmin;
+    font-weight: 600;
+
+}
+
+.yellow{
+    color: #efe808;
+}
+
+.scoreArea{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #F8F9FA;
+
+}
+
+table, td{
+    background: #0B1220;
+    border: 2px solid #153B66;
+    padding: 0.1vmin 2vmin;
+
+}
+
+table{
+    border-collapse: collapse;
+    border-radius: 20vmin;
+    margin: 1vmin;
+    padding: 2vmin;
+
+    font-size: 3vmin;
+    text-align: center;
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+.bottomArea{
+
+    color: #F8F9FA;
+    margin: 2vmin;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.diceArea{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: #081326;
+    border: 1px solid #1F3A5A;
+    border-radius: 2vmin;
+
+    padding: 0.1vmin;
+
+}
+
+.dies-container{
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dice{
+
+    height: 12vmin;
+    width: 12vmin;
+
+    margin: 0.5vmin;
+    cursor: pointer;
+}
+
+.dice-img{
+    height: 10vmin;
+    width: 10vmin;
+    
+    border: 0.7vmin solid transparent;
+    border-radius: 2.5vmin;
+}
+
+
+#roll-btn{
+    color: #FFF8E7;
+
+    width: 30vmin;
+
+    margin: 2vmin;
+    padding: 1vmin;
+    background-color: #C58A1D;
+    font-size : 3.7vmin;
+    font-weight: 600;
+
+    border: 2px solid #F2C14E;
+    border-radius: 2vmin;
+}
+
+#roll-btn:hover{
+    background: #E6A823;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(195,138,34,0.35);
+}
+
+#roll-btn:disabled{
+    background : #5a4a24;
+    color: #b7b7b7;
+}
+
+.powerupArea{
+    display:none;
+}
+
+.locked-dice{
+    border: 0.7vmin solid rgb(202, 118, 22);
+}
+
+.team1{
+    color: #35E0FF;
+}
+
+.team2{
+    color: #B55CFF;
+}
+
+.team3{
+    color: #FFC247;
+}
+
+.team4{
+    color: #42F58D;
+}
+
+.team5{
+    color: #FF6B6B;
+}
+
+.team6{
+    color: #FF8A00;
+}
+
+.team1.turn{
+    background: rgba(53,224,255,0.38);
+}
+
+.team2.turn{
+    background: rgba(181,92,255,0.38);
+}
+
+.team3.turn{
+    background: rgba(255,194,71,0.38);
+}
+
+.team4.turn{
+    background: rgba(66,245,141,0.38);
+}
+
+.team5.turn{
+    background: rgba(255,107,107,0.38);
+}
+
+.team6.turn{
+    background: rgba(255,138,0,0.38);
+}
+
+.team1.isTaken.turn{
+    background: rgba(53,224,255,0.18);
+}
+
+.team2.isTaken.turn{
+    background: rgba(181,92,255,0.08);
+}
+
+.team3.isTaken.turn{
+    background: rgba(255,194,71,0.08);
+}
+
+.team4.isTaken.turn{
+    background: rgba(66,245,141,0.08);
+}
+
+.team5.isTaken.turn{
+    background: rgba(255,107,107,0.08);
+}
+
+.team6.isTaken.turn{
+    background: rgba(255,138,0,0.08);
+}

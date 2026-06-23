@@ -63,3 +63,9 @@ for (let i = 0; i < num_teams; i++){
     }
 
 }
+
+let playBtn = document.querySelector(".gold-btn");
+
+playBtn.addEventListener('click', ()=>{
+    window.location.href = "../pages/yazy.html";
+})
