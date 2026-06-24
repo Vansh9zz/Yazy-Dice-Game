@@ -25,7 +25,9 @@ let isRunning = true;
 let num_rounds = 1;
 
 let luckyNumber = Math.floor(Math.random()*16) + 9;
-let num_lucky = 0;
+let num_lucky = 1;
+
+let num_turns = 0;
 
 
 for (let i = 0; i < num_players; i++){
@@ -89,7 +91,7 @@ for (let dice of dies){
 
 
 rollBtn.addEventListener('click',()=>{
-    console.log(luckyNumber);
+
     if (!isRunning){
         rollBtn.disabled = true;
         return;
@@ -120,8 +122,8 @@ rollBtn.addEventListener('click',()=>{
         // Ones to Sixes
         for (let i = 1; i < 7; i ++){
 
+            counts[i-1] = d.filter(item => item === i).length;
             if (!category_taken[currTurn][i-1]){
-                counts[i-1] = d.filter(item => item === i).length; 
                 availableScores[i-1] = i * counts[i-1];
             }
 
@@ -196,7 +198,7 @@ rollBtn.addEventListener('click',()=>{
         // Lucky Number
         if (!category_taken[currTurn][11]){
             if (dieSum === luckyNumber){
-                num_lucky++;
+
                 if (num_lucky === 1){
                     availableScores[11] = 50;
                 } else if (num_lucky === 2){
@@ -282,13 +284,20 @@ for (let cell of scoreCells){
         if (!cell.classList.contains("clickable")){
             return;
         }
-        console.log("clicked");
+
+        num_turns++;
+        console.log(num_turns);
+
         cell.classList.add("isTaken");
 
         // Task 4
         let id = Number(cell.id.slice(4));
 
         let category_idx = Math.floor(id/num_players);
+
+        if (category_idx === 11){
+            num_lucky++;
+        }
 
         scores[currTurn][category_idx] = availableScores[category_idx];
         category_taken[currTurn][category_idx] = true;
@@ -347,7 +356,7 @@ for (let cell of scoreCells){
         if (currTurn === 0){
             num_rounds++;
             let num_round = document.querySelector("#num_rounds");
-            if (num_rounds <= 12){
+            if (num_turns < 12 * num_players){
                 num_round.textContent = Number(num_round.textContent) + 1;
             } else {
                 isRunning = false;
@@ -358,13 +367,47 @@ for (let cell of scoreCells){
                 for (let i = 1; i <= num_players; i++){
                     playerTotals.push(Number(playerTotalRow.cells[i].textContent))
                 }
-
-                for (let i = 1; i <= numTeams; i++){
-                    playerTotals.push(Number(teamTotalRow.cells[i].textContent))
+                
+                if (selected_fmt !== "solo"){
+                    for (let i = 1; i <= numTeams; i++){
+                        playerTotals.push(Number(teamTotalRow.cells[i].textContent))
+                    }
                 }
 
                 localStorage.setItem("player_totals", playerTotals);
                 localStorage.setItem("team_totals", teamTotals);
+
+                let winningScore;
+                let idx;
+                if (selected_fmt === "solo"){
+                    idx = [1];
+                    winningScore = Number(playerTotalRow.cells[idx].textContent);
+
+                    for (let i = 2; i <= num_players; i++){
+                        if (Number(playerTotalRow.cells[i].textContent) > Number(playerTotalRow.cells[idx].textContent)){
+                            idx = i;
+                            winningScore = Number(playerTotalRow.cells[idx].textContent);
+                        } else if (Number(playerTotalRow.cells[i].textContent) === Number(playerTotalRow.cells[idx].textContent)){
+                            idx.push(i);
+                        }
+                    }
+                } else {
+                    idx = [1];
+                    winningScore = Number(teamTotalRow.cells[idx].textContent);
+                    for (let i = 2; i <= numTeams; i++){
+                        if (Number(teamTotalRow.cells[i].textContent) > Number(teamTotalRow.cells[idx].textContent)){
+                            idx = i;
+                            winningScore = Number(teamTotalRow.cells[idx].textContent);
+                        } else if (Number(teamTotalRow.cells[i].textContent) === Number(teamTotalRow.cells[idx].textContent)){
+                            idx.push(i);
+                        }
+                    }
+                }
+
+                let winningTeam = `Team ${String.fromCharCode(idx[0] + 64)}`;
+                
+                localStorage.setItem("winning_team", winningTeam);
+                localStorage.setItem("winning_score", winningScore);
 
                 window.location.href = "../pages/winner.html";
             }
@@ -392,3 +435,5 @@ for (let cell of scoreCells){
 
 
 }
+
+

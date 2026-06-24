@@ -1,0 +1,150 @@
+body{
+    margin:0;
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#071321;
+
+    font-family:sans-serif;
+
+    color:white;
+}
+
+.winner-card{
+
+    width:70vmin;
+
+    padding:4vmin;
+
+    text-align:center;
+
+    background:#081326;
+
+    border:2px solid #F2C14E;
+
+    border-radius:3vmin;
+
+    box-shadow:
+        0 0 25px rgba(242,193,78,0.15);
+}
+
+.logo{
+    color:white;
+
+    margin-bottom:1rem;
+}
+
+.trophy{
+    font-size:5rem;
+
+    margin-bottom:1rem;
+}
+
+.game-over{
+
+    color:#C6D0DD;
+
+    letter-spacing:0.2rem;
+}
+
+.winner-heading{
+
+    color:#9EAABA;
+
+    margin-top:2rem;
+}
+
+#winner-name{
+
+    color:#35E0FF;
+
+    margin:0.5rem 0;
+}
+
+.final-score{
+
+    color:#F2C14E;
+
+    font-size:1.5rem;
+
+    margin-bottom:2rem;
+}
+
+.btn-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:1rem;
+}
+
+button{
+
+    padding:1rem 2rem;
+
+    border:none;
+
+    border-radius:1rem;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+    transition:0.2s;
+}
+
+#play-again{
+
+    background:#F2C14E;
+
+    color:#071321;
+}
+
+#home-btn{
+
+    background:#153B66;
+
+    color:white;
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+}
+
+#team-members{
+
+    margin-top:2vmin;
+    margin-bottom:2vmin;
+}
+
+.team-label{
+
+    color:#9EAABA;
+
+    letter-spacing:0.1rem;
+
+    margin-bottom:1vmin;
+}
+
+.team-member{
+
+    color:white;
+
+    font-size:1.2rem;
+
+    margin:0.5vmin;
+
+    padding:0.5rem 1rem;
+
+    border-radius:1rem;
+
+    background:#10233D;
+
+    border:1px solid #1F3A5A;
+}

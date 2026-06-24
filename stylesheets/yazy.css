@@ -54,6 +54,11 @@ table{
     cursor: pointer;
 }
 
+.clickable:hover{
+    transform: scale(1.02);
+    filter: brightness(1.15);
+}
+
 .bottomArea{
 
     color: #F8F9FA;
@@ -72,8 +77,8 @@ table{
     justify-content: center;
     align-items: center;
 
-    background: #081326;
-    border: 1px solid #1F3A5A;
+    box-shadow: 0 0 20px rgba(31,58,90,0.3);
+
     border-radius: 2vmin;
 
     padding: 0.1vmin;
@@ -137,6 +142,7 @@ table{
 
 .locked-dice{
     border: 0.7vmin solid rgb(202, 118, 22);
+    box-shadow: 0 0 15px rgba(242,193,78,0.5);
 }
 
 .team1{
@@ -187,7 +193,11 @@ table{
     background: rgba(255,138,0,0.38);
 }
 
-.team1.isTaken.turn{
+.isTaken.turn{
+    background: #0B1220;   
+}
+
+/* .team1.isTaken.turn{
     background: rgba(53,224,255,0.18);
 }
 
@@ -209,4 +219,4 @@ table{
 
 .team6.isTaken.turn{
     background: rgba(255,138,0,0.08);
-}
+} */
