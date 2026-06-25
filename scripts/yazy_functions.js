@@ -385,7 +385,7 @@ for (let cell of scoreCells){
 
                     for (let i = 2; i <= num_players; i++){
                         if (Number(playerTotalRow.cells[i].textContent) > Number(playerTotalRow.cells[idx].textContent)){
-                            idx = i;
+                            idx = [i];
                             winningScore = Number(playerTotalRow.cells[idx].textContent);
                         } else if (Number(playerTotalRow.cells[i].textContent) === Number(playerTotalRow.cells[idx].textContent)){
                             idx.push(i);
@@ -396,7 +396,7 @@ for (let cell of scoreCells){
                     winningScore = Number(teamTotalRow.cells[idx].textContent);
                     for (let i = 2; i <= numTeams; i++){
                         if (Number(teamTotalRow.cells[i].textContent) > Number(teamTotalRow.cells[idx].textContent)){
-                            idx = i;
+                            idx = [i];
                             winningScore = Number(teamTotalRow.cells[idx].textContent);
                         } else if (Number(teamTotalRow.cells[i].textContent) === Number(teamTotalRow.cells[idx].textContent)){
                             idx.push(i);

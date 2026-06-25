@@ -3,6 +3,21 @@
     padding:0;
 }
 
+.background{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    overflow:hidden;
+}
+
+.background .game-page{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    object-position:left bottom;
+}
+
 body{
     background-color: #00040e;
 }

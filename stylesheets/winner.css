@@ -14,6 +14,22 @@ body{
     color:white;
 }
 
+.background{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    overflow:hidden;
+}
+
+.background .winner-page{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    object-position:center;
+}
+
+
 .winner-card{
 
     width:70vmin;

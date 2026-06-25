@@ -14,11 +14,15 @@ if (selected_fmt === "solo"){
 let numTeams = Number(num_players)/playersPerTeam;
 
 let winningTeam = localStorage.getItem("winning_team");
+let letter = winningTeam.slice(-1);
+
+let idx = letter.charCodeAt(0) - 64;
+
 
 let winningScore = localStorage.getItem("winning_score");
 
 if (winningTeam) {
-  document.querySelector("#winner-name").textContent = winningTeam;
+  document.querySelector("#winner-name").textContent = (selected_fmt === "solo") ? `Player ${idx}` : winningTeam;
 }
 
 if (winningScore) {
@@ -38,8 +42,10 @@ if (selected_fmt !== "solo") {
   let membersDiv = document.querySelector("#team-members");
 
   membersDiv.innerHTML = `<p class="team-label">Team Members</p>`;
+  teamLetter = winningTeam.slice(-1);
 
-  let teamNo = Number(winningTeam.charCodeAt(5)) - 64;
+  console.log(teamLetter);
+  let teamNo = Number(teamLetter) - 64;
   console.log(teamNo);
 
   let startIdx = (teamNo - 1) * playersPerTeam;
@@ -54,4 +60,6 @@ if (selected_fmt !== "solo") {
 
     membersDiv.appendChild(p);
   }
+} else {
+
 }

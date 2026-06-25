@@ -35,6 +35,7 @@ for (let i = 0; i < num_teams; i++){
     const card = document.createElement("div");
     card.classList.add("summary-team-card");
     card.classList.add(`t${i+1}`);
+    card.style.margin = "1vmin";
 
     container.appendChild(card);
 
@@ -45,6 +46,7 @@ for (let i = 0; i < num_teams; i++){
         team_tag.textContent = `TEAM ${String.fromCharCode(i + 65)}:`;
         team_tag.style.display = "flex";
         team_tag.style.alignItems = "center";
+        team_tag.style.paddingLeft = "5vmin";
 
         card.appendChild(team_tag);
     }
@@ -56,6 +58,11 @@ for (let i = 0; i < num_teams; i++){
         name.classList.add("summary-team-card-playerName");
 
         name.textContent = player_names[count];
+        name.paddingLeft = "10vmin";
+        
+        if (j === 1){
+            name.paddingRight = "10vmin";
+        }
 
         card.appendChild(name);
 

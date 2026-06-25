@@ -25,9 +25,13 @@ for (let box = 0; box < num_boxes; box++){
     const row = document.createElement("div");
     row.classList.add("name-cards-row");
 
+    
+    if (box === 1){
+        row.style.paddingLeft = "10vmin";
+    }
+
     container.appendChild(row);
     boxes.push(row);
-
 }
 
 // Creating cards
